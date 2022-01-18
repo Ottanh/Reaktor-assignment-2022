@@ -3,7 +3,6 @@ import React from 'react';
 import './Scoreboard.css';
 
 const Scoreboard = ({ liveGames }) => {
-
   return (
     <table>
       <tbody>
@@ -16,12 +15,11 @@ const Scoreboard = ({ liveGames }) => {
               <th>{game.playerA.played}</th>
               <th>{game.playerB.name}</th>
             </tr>
-          )
+          );
         })}
       </tbody>
     </table>
-  )
-
-}
+  );
+};
 
 export default Scoreboard;
