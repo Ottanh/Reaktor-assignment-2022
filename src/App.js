@@ -11,7 +11,7 @@ const App = () => {
   webSocket.onmessage = (event) => {
     const msg = JSON.parse(JSON.parse(event.data));
     const index = liveGames.findIndex(el => el.gameId === msg.gameId);
-    // console.log(msg)
+    console.log(msg);
 
     const copy = [...liveGames];
 
@@ -24,9 +24,14 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <Scoreboard liveGames={liveGames} />
+
+    <div className='wrapper'>
+      <h1>Live games</h1>
+      <div className='App'>
+        <Scoreboard liveGames={liveGames} />
+      </div>
     </div>
+
   );
 };
 
