@@ -25,9 +25,9 @@ const App = () => {
 
   return (
 
-    <div className='wrapper'>
+    <div className='fadeDiv'>
       <h1>Live games</h1>
-      <div className='App'>
+      <div className='scrollDiv'>
         <Scoreboard liveGames={liveGames} />
       </div>
     </div>

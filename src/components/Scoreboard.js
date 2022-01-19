@@ -1,13 +1,13 @@
 import React from 'react';
 
 import './Scoreboard.css';
-import rock from './rock.png';
-import scissors from './scissors.png';
-import paper from './paper.png';
+import rock from '../images/rock.png';
+import scissors from '../images/scissors.png';
+import paper from '../images/paper.png';
 
 const Scoreboard = ({ liveGames }) => {
   return (
-    <table>
+    <table className='scoreboard'>
       <tbody>
         {liveGames.map(game => {
           const playerA = game.playerA;
