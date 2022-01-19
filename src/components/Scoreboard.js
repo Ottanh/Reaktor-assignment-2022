@@ -13,24 +13,24 @@ const Scoreboard = ({ liveGames }) => {
           const playerA = game.playerA;
           const playerB = game.playerB;
           return (
-            <tr key={game.gameId}>
-              <th>{playerA.name}</th>
+            <tr key={game.gameId} data-testid='row'>
+              <th data-testid='nameA'>{playerA.name}</th>
               <th>
                 {playerA.played === 'ROCK' &&
                   <img src={rock} alt='ROCK' width={50} />}
                 {playerA.played === 'SCISSORS' &&
-                  <img src={scissors} alt='ROCK' width={50} />}
+                  <img src={scissors} alt='SCISSORS' width={50} />}
                 {playerA.played === 'PAPER' &&
-                  <img src={paper} alt='ROCK' width={50} />}
+                  <img src={paper} alt='PAPER' width={50} />}
               </th>
-              <th className='VS'>VS</th>
+              <th>VS</th>
               <th>
                 {playerB.played === 'ROCK' &&
                   <img src={rock} alt='ROCK' width={50} />}
                 {playerB.played === 'SCISSORS' &&
-                  <img src={scissors} alt='ROCK' width={50} />}
+                  <img src={scissors} alt='SCISSORS' width={50} />}
                 {playerB.played === 'PAPER' &&
-                  <img src={paper} alt='ROCK' width={50} />}
+                  <img src={paper} alt='PAPER' width={50} />}
               </th>
               <th>{playerB.name}</th>
             </tr>
