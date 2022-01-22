@@ -10,9 +10,11 @@ const Row = ({ index, style, data }) => {
 
   const date = new Date(data[index].t);
 
+  const backgroundColor = index % 2 === 0 ? 'rgb(180, 165, 165)' : 'rgb(60, 65, 92)'
+
   return (
     <div style={style}>
-      <div className='container'>
+      <div className='container' style={{backgroundColor: backgroundColor}}>
         <div className='flex'>{date.toISOString()}</div>
         <div className='flex'>PlayerA</div>
         <div className='flex'>ROCK</div>
