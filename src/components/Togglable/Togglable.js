@@ -12,10 +12,11 @@ const Togglable = (props) => {
   const hideWhenVisible = { display: visible ? 'none' : '' };
   const showWhenVisible = { display: visible ? '' : 'none' };
 
+  // Toggle visible content and load games from good-api if it has not yet been done
   const toggleVisibility = async () => {
     setVisible(!visible);
     if (games.length === 0) {
-      const response = await axios.get(`https://good-api222.herokuapp.com/rps/games/${data._id}`);
+      const response = await axios.get(`https://good-api-eu.herokuapp.com/rps/games/${data._id}`);
       setGames(response.data.games);
       console.log('done');
     }
@@ -24,19 +25,19 @@ const Togglable = (props) => {
   return (
     <div className='toggable'>
       <div style={hideWhenVisible}>
-        <div className='header' onClick={toggleVisibility}>
+        <div className='header' onClick={toggleVisibility} data-testid='header'>
           <div className='flex'>{data._id}</div>
           <div className='flex'>Games {data.games}</div>
           <div className='flex'>Wins {Number(data.wins / data.games * 100).toFixed(2)}%</div>
         </div>
       </div>
-      <div style={showWhenVisible}>
+      <div style={showWhenVisible} data-testid='togglableContent'>
         <div className='header' onClick={toggleVisibility}>
           <div className='flex'>{data._id}</div>
           <div className='flex'>Games {data.games}</div>
           <div className='flex'>Wins {Number(data.wins / data.games * 100).toFixed(2)}%</div>
         </div>
-        <div className='content'>
+        <div className='content' data-testid='content'>
           {games.length === 0 && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
           {games.length !== 0 && <VirtualList games={games} />}
         </div>
