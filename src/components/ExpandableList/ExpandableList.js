@@ -1,30 +1,20 @@
 import React from 'react';
 
 import Togglable from '../Togglable/Togglable';
-import './ExpandableList.css'
-import VirtualList from '../VirtualList/VirtualList'
-
+import './ExpandableList.css';
 
 const ExpandableList = ({ data }) => {
-
-
-  return(
+  return (
     <div className='listWrapper'>
       <ul>
-      {data.map(data => (
-        <li key={data._id}>
-          <Togglable data={data}>
-            <VirtualList player={data._id}/>
-          </Togglable>
-        </li>
-      ))}
+        {data.map(data => (
+          <li key={data._id}>
+            <Togglable data={data} />
+          </li>
+        ))}
       </ul>
     </div>
-  )
-
-
-}
-
-
+  );
+};
 
 export default ExpandableList;

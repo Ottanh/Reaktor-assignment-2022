@@ -1,13 +1,12 @@
 
-import './Cell.css'
+import './Cell.css';
 import rock from './images/rock.png';
 import scissors from './images/scissors.png';
 import paper from './images/paper.png';
 
-const Cell = ({playerA, playerB, key, altRow}) => {
-
+const Cell = ({ playerA, playerB, altRow }) => {
   return (
-    <tr className={ altRow ? 'row' : 'altRow' } key={key} data-testid='row'>
+    <tr className={altRow ? 'row' : 'altRow'} data-testid='row'>
       <th data-testid='nameA'>{playerA.name}</th>
       <th>
         {playerA.played === 'ROCK' &&
@@ -28,8 +27,7 @@ const Cell = ({playerA, playerB, key, altRow}) => {
       </th>
       <th>{playerB.name}</th>
     </tr>
-  )
-
-}
+  );
+};
 
 export default Cell;

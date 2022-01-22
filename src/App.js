@@ -5,8 +5,6 @@ import './App.css';
 import axios from 'axios';
 
 import ExpandableList from './components/ExpandableList/ExpandableList';
-import Example from './components/VirtualList/VirtualList';
-
 
 const webSocket = new WebSocket('wss://bad-api-assignment.reaktor.com/rps/live');
 
@@ -19,7 +17,7 @@ const App = () => {
   webSocket.onmessage = (event) => {
     const msg = JSON.parse(JSON.parse(event.data));
     const index = liveGames.findIndex(el => el.gameId === msg.gameId);
-    //console.log(msg);
+    // console.log(msg);
 
     const copy = [...liveGames];
 
@@ -32,43 +30,41 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    axios.get('https://good-api222.herokuapp.com/rps/stats')
+      .then(response => {
+        setStats(response.data);
+        console.log('done');
+      });
+  }, []);
 
   useEffect(() => {
     axios.get('https://good-api222.herokuapp.com/rps/stats')
       .then(response => {
         setStats(response.data);
-        console.log("done")
-      })
-  },[])
-
-  useEffect(() => {
-    axios.get('https://good-api222.herokuapp.com/rps/stats')
-      .then(response => {
-        setStats(response.data);
-        console.log("done")
-      })
-  },[])
-
+        console.log('done');
+      });
+  }, []);
 
   return (
 
-  <div> 
-    <div className='liveDiv'>
-      <div className='fadeDiv'>
-        <h1>Live games</h1>
-        <div className='scrollDiv'>
-          <Scoreboard liveGames={liveGames} classname='className' altRow={altRow} />
+    <div className='app'>
+      <div className='liveDiv'>
+        <div className='fadeDiv'>
+          <h1>Live games</h1>
+          <div className='scrollDiv'>
+            <Scoreboard liveGames={liveGames} classname='className' altRow={altRow} />
+          </div>
+        </div>
+      </div>
+
+      <div className='statsDiv'>
+        <h1>Historical stats</h1>
+        <div className='statsContainer'>
+          <ExpandableList data={stats} />
         </div>
       </div>
     </div>
-
-    <div className='statsDiv'>
-      <h1>Historical stats</h1>
-      <div className='statsContainer'>
-        <ExpandableList data={stats} />
-      </div>
-    </div>
-  </div>
 
   );
 };
