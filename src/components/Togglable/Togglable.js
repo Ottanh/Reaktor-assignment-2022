@@ -38,7 +38,7 @@ const Togglable = (props) => {
           <div className='flex'>Wins {Number(data.wins / data.games * 100).toFixed(2)}%</div>
         </div>
         <div className='content'>
-          {games.length === 0 && <p className='loading'>Loading...</p>}
+          {games.length === 0 && <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
           {games.length !== 0 && <VirtualList games={games} />}
         </div>
       </div>
