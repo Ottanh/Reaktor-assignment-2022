@@ -1,0 +1,16 @@
+th {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80px;
+  align-items: center;
+}
+
+tr {
+  height: 50px;
+}
+
+
+/* Alternating colors of scoreboard rows */
+.row:nth-child(even) {background-color: rgb(180, 165, 165);}
+
+.altRow:nth-child(odd) {background-color: rgb(180, 165, 165);}

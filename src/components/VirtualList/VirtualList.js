@@ -26,7 +26,7 @@ const Row = ({ index, style, data }) => {
 };
 
 
-const Example = ({player}) => {
+const VirtualList = ({player}) => {
 
   const [games, setGames] = useState([]);
 
@@ -57,4 +57,4 @@ const Example = ({player}) => {
 };
 
 
-export default Example;
+export default VirtualList;
