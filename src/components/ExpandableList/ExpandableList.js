@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import Scoreboard from '../Scoreboard/Scoreboard';
+import React from 'react';
+
 import Togglable from '../Togglable/Togglable';
 import './ExpandableList.css'
+import VirtualList from '../VirtualList/VirtualList'
 
 
-const ExpandableList = ({ data, liveGames }) => {
+const ExpandableList = ({ data }) => {
 
 
   return(
@@ -13,7 +14,7 @@ const ExpandableList = ({ data, liveGames }) => {
       {data.map(data => (
         <li key={data._id}>
           <Togglable data={data}>
-            <Scoreboard liveGames={liveGames} />
+            <VirtualList player={data._id}/>
           </Togglable>
         </li>
       ))}

@@ -5,6 +5,7 @@ import './App.css';
 import axios from 'axios';
 
 import ExpandableList from './components/ExpandableList/ExpandableList';
+import Example from './components/VirtualList/VirtualList';
 
 
 const webSocket = new WebSocket('wss://bad-api-assignment.reaktor.com/rps/live');
@@ -40,10 +41,14 @@ const App = () => {
       })
   },[])
 
-  const testdata = [{name: 'mouse', games: 4, wins: 2}]
+  useEffect(() => {
+    axios.get('https://good-api222.herokuapp.com/rps/stats')
+      .then(response => {
+        setStats(response.data);
+        console.log("done")
+      })
+  },[])
 
-
-  //console.log(stats);
 
   return (
 
@@ -60,7 +65,7 @@ const App = () => {
     <div className='statsDiv'>
       <h1>Historical stats</h1>
       <div className='statsContainer'>
-        <ExpandableList data={stats} liveGames={liveGames} contentClassName='listboard'/>
+        <ExpandableList data={stats} />
       </div>
     </div>
   </div>
