@@ -5,7 +5,7 @@ import rock from '../images/rock.png';
 import scissors from '../images/scissors.png';
 import paper from '../images/paper.png';
 
-const Scoreboard = ({ liveGames }) => {
+const Scoreboard = ({ liveGames, altRow }) => {
   return (
     <table className='scoreboard'>
       <tbody>
@@ -13,7 +13,7 @@ const Scoreboard = ({ liveGames }) => {
           const playerA = game.playerA;
           const playerB = game.playerB;
           return (
-            <tr key={game.gameId} data-testid='row'>
+            <tr className={ altRow ? 'row' : 'altRow' } key={game.gameId} data-testid='row'>
               <th data-testid='nameA'>{playerA.name}</th>
               <th>
                 {playerA.played === 'ROCK' &&

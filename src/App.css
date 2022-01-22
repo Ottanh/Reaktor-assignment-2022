@@ -2,8 +2,13 @@
 
 body {
   background-color: rgb(21, 21, 21);
-  text-align: center;
-  padding-top: 50px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: whitesmoke;
 }
 
 
@@ -11,10 +16,15 @@ body {
   position: relative;
   overflow: auto;
   height: 500px;
+  width: 508px;
   display: inline-block;
-
-
+  border-radius: 5px;
 }
+
+.liveDiv {
+  text-align: center;
+}
+
 
 .fadeDiv {
   position: relative;
@@ -33,9 +43,15 @@ body {
   height: 8em;
 }
 
-h1 {
-  font-size: 36px;
-  color: whitesmoke;
+
+.statsDiv {
+  text-align: center;
+  }
+
+.statsContainer {
+  width: 508px;
+  position: relative;
+  display: inline-block;
 }
 
 

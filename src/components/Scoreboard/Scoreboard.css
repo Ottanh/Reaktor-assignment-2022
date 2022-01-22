@@ -5,18 +5,21 @@
   text-align: center;
   border-collapse: collapse;
   background-color: rgb(60, 65, 92);
-  box-shadow: inset 0 0 10px -10px #555
 }
 
 th {
   padding-left: 10px;
   padding-right: 10px;
-  height: 50px;
   width: 80px;
   align-items: center;
 }
 
+tr {
+  height: 50px;
+}
+
 
 /* Alternating colors of scoreboard rows */
-tr:nth-child(even) {background-color: rgb(180, 165, 165);}
+.row:nth-child(even) {background-color: rgb(180, 165, 165);}
 
+.altRow:nth-child(odd) {background-color: rgb(180, 165, 165);}

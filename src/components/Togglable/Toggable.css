@@ -1,0 +1,16 @@
+
+.content {
+  position: relative;
+  overflow: auto;
+  display: inline-block;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 24px;
+  background-color: rgb(180, 165, 165);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  height: 30px;
+}
