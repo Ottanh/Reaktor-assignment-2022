@@ -13,7 +13,6 @@ const Togglable = (props) => {
   const showWhenVisible = { display: visible ? '' : 'none' };
 
   const toggleVisibility = async () => {
-    console.log('AAAA' + games.length);
     setVisible(!visible);
     if (games.length === 0) {
       const response = await axios.get(`https://good-api222.herokuapp.com/rps/games/${data._id}`);
@@ -38,7 +37,7 @@ const Togglable = (props) => {
           <div className='flex'>Wins {Number(data.wins / data.games * 100).toFixed(2)}%</div>
         </div>
         <div className='content'>
-          {games.length === 0 && <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
+          {games.length === 0 && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
           {games.length !== 0 && <VirtualList games={games} />}
         </div>
       </div>

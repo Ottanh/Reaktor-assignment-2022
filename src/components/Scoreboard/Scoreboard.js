@@ -8,7 +8,7 @@ const Scoreboard = ({ liveGames, altRow }) => {
     <table className='scoreboard'>
       <tbody>
         {liveGames.map(game => (
-          <Cell playerA={game.playerA} playerB={game.playerB} key={game.gameId} />
+          <Cell playerA={game.playerA} playerB={game.playerB} key={game.gameId} altRow={altRow} />
         ))}
       </tbody>
     </table>
