@@ -11,8 +11,9 @@ const webSocket = new WebSocket('wss://bad-api-assignment.reaktor.com/rps/live')
 
 const App = () => {
   const [liveGames, setliveGames] = useState([]);
-  const [altRow, setaltRow] = useState(false);
+  const [stats, setStats] = useState([]);
 
+  const [altRow, setaltRow] = useState(false);
 
   webSocket.onmessage = (event) => {
     const msg = JSON.parse(JSON.parse(event.data));
@@ -31,8 +32,18 @@ const App = () => {
   };
 
 
+  useEffect(() => {
+    axios.get('https://good-api222.herokuapp.com/rps/stats')
+      .then(response => {
+        setStats(response.data);
+        console.log("done")
+      })
+  },[])
+
+  const testdata = [{name: 'mouse', games: 4, wins: 2}]
 
 
+  //console.log(stats);
 
   return (
 
@@ -49,7 +60,7 @@ const App = () => {
     <div className='statsDiv'>
       <h1>Historical stats</h1>
       <div className='statsContainer'>
-        <ExpandableList data={[1,2,3,4,5]} liveGames={liveGames} contentClassName='listboard'/>
+        <ExpandableList data={stats} liveGames={liveGames} contentClassName='listboard'/>
       </div>
     </div>
   </div>

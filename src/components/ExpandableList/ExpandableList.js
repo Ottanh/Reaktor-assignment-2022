@@ -10,9 +10,9 @@ const ExpandableList = ({ data, liveGames }) => {
   return(
     <div className='listWrapper'>
       <ul>
-      {data.map(dat => (
-        <li key={dat}>
-          <Togglable buttonLabel='avaa'>
+      {data.map(data => (
+        <li key={data._id}>
+          <Togglable data={data}>
             <Scoreboard liveGames={liveGames} />
           </Togglable>
         </li>
