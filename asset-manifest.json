@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/reaktor-assignment-2022/static/css/main.d605a391.css",
-    "main.js": "/reaktor-assignment-2022/static/js/main.1026d15b.js",
+    "main.js": "/reaktor-assignment-2022/static/js/main.110cfcc9.js",
     "static/media/rock.png": "/reaktor-assignment-2022/static/media/rock.68cff462d497f2a6f60b.png",
     "static/media/paper.png": "/reaktor-assignment-2022/static/media/paper.2b74121ef770f94f339d.png",
     "static/media/scissors.png": "/reaktor-assignment-2022/static/media/scissors.11f7959d510a336f86a4.png",
     "index.html": "/reaktor-assignment-2022/index.html",
     "main.d605a391.css.map": "/reaktor-assignment-2022/static/css/main.d605a391.css.map",
-    "main.1026d15b.js.map": "/reaktor-assignment-2022/static/js/main.1026d15b.js.map"
+    "main.110cfcc9.js.map": "/reaktor-assignment-2022/static/js/main.110cfcc9.js.map"
   },
   "entrypoints": [
     "static/css/main.d605a391.css",
-    "static/js/main.1026d15b.js"
+    "static/js/main.110cfcc9.js"
   ]
 }
