@@ -16,7 +16,7 @@ h1 {
   width: 508px;
   display: inline-block;
   border-radius: 5px;
-  background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0.2) 95%, hsla(351, 45%, 45%, 0) 100%);
+  background-image: linear-gradient(90deg, hsla(0, 0%, 0%, 0.2) 98%, hsla(351, 45%, 45%, 0) 99%);
 
 }
 
@@ -46,7 +46,7 @@ h1 {
   }
 
 .statsContainer {
-  width: 600px;
+  width: 800px;
   position: relative;
   display: inline-block;
 }

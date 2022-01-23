@@ -11,11 +11,11 @@ const Row = ({ index, style, data }) => {
   return (
     <div style={style}>
       <div className='container' style={{ backgroundColor: backgroundColor }}>
-        <div className='flex'>{date.toISOString()}</div>
-        <div className='flex'>{playerA.name}</div>
-        <div className='flex'>ROCK</div>
-        <div className='flex'>PAPER</div>
-        <div className='flex'>PlayerB</div>
+        <div className='flex date'>{date.toISOString()}</div>
+        <div className='flex name'>{playerA.name}</div>
+        <div className='flex hand'>{playerA.played}</div>
+        <div className='flex hand'>{playerB.played}</div>
+        <div className='flex name'>{playerB.name}</div>
       </div>
     </div>
   );
@@ -25,8 +25,8 @@ const VirtualList = ({ games }) => {
   return (
     <List
       itemCount={games.length}
-      itemSize={25}
-      width={620}
+      itemSize={30}
+      width={820}
       height={500}
       itemData={games}
     >

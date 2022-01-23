@@ -11,14 +11,20 @@
   background-color: rgb(180, 165, 165);
   margin-bottom: 5px;
   border-radius: 5px;
-  height: 30px;
+  height: 42px;
   display: flex;
   align-items: center;
+  font-size: 17px;
+  padding-right: 30px;
+  font-family: "Lucida Console";
 }
 
 .flex {
   flex-grow: 1;
+  text-align: center;
+  width: 80px;
 }
+
 
 /* Loading animation */
 .lds-ellipsis {

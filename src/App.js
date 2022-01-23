@@ -31,15 +31,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    axios.get('https://good-api222.herokuapp.com/rps/stats')
-      .then(response => {
-        setStats(response.data);
-        console.log('done');
-      });
-  }, []);
-
-  useEffect(() => {
-    axios.get('https://good-api222.herokuapp.com/rps/stats')
+    axios.get('https://good-api-eu.herokuapp.com/rps/stats')
       .then(response => {
         setStats(response.data);
         console.log('done');
