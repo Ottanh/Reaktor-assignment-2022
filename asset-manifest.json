@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/reaktor-assignment-2022/static/css/main.f5ee62e1.css",
-    "main.js": "/reaktor-assignment-2022/static/js/main.b1f58244.js",
+    "main.css": "/reaktor-assignment-2022/static/css/main.d5579afa.css",
+    "main.js": "/reaktor-assignment-2022/static/js/main.1026d15b.js",
     "static/media/rock.png": "/reaktor-assignment-2022/static/media/rock.68cff462d497f2a6f60b.png",
     "static/media/paper.png": "/reaktor-assignment-2022/static/media/paper.2b74121ef770f94f339d.png",
     "static/media/scissors.png": "/reaktor-assignment-2022/static/media/scissors.11f7959d510a336f86a4.png",
     "index.html": "/reaktor-assignment-2022/index.html",
-    "main.f5ee62e1.css.map": "/reaktor-assignment-2022/static/css/main.f5ee62e1.css.map",
-    "main.b1f58244.js.map": "/reaktor-assignment-2022/static/js/main.b1f58244.js.map"
+    "main.d5579afa.css.map": "/reaktor-assignment-2022/static/css/main.d5579afa.css.map",
+    "main.1026d15b.js.map": "/reaktor-assignment-2022/static/js/main.1026d15b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5ee62e1.css",
-    "static/js/main.b1f58244.js"
+    "static/css/main.d5579afa.css",
+    "static/js/main.1026d15b.js"
   ]
 }
