@@ -3,5 +3,6 @@
   text-align: center;
   border-collapse: collapse;
   background-color: rgb(60, 65, 92);
+  overflow-anchor: none;
 }
 
