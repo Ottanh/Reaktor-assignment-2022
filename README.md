@@ -1,7 +1,8 @@
 # Reaktor-assignment-2022
 
 Solution to Reaktor's pre-assignment 2022.     
-Shows live games in real time and all historical stats from players.
+Shows live games in real time and all historical stats from players.   
+To see all games the player has played click their stats.
 
 [Link to github pages](https://ottanh.github.io/reaktor-assignment-2022/)
 
