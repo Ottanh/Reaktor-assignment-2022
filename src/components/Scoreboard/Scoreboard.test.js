@@ -38,6 +38,7 @@ const liveGames = [
   }
 ];
 
+/* eslint-env jest */
 test('renders games in correct order and text content', () => {
   const values = [
     'Louhi NieminenVSAhti Virtanen',

@@ -27,12 +27,12 @@ const Togglable = (props) => {
   };
 
   let mostPlayed;
-  if(data.ROCK >= data.PAPER && data.ROCK >= data.SCISSORS){
-    mostPlayed = <img src={rock} alt='ROCK' width={40} />
-  } else if(data.PAPER >= data.ROCK && data.PAPER >= data.SCISSORS){
-    mostPlayed = <img src={scissors} alt='PAPER' width={40} />
-  } else if(data.SCISSORS >= data.ROCK && data.SCISSORS >= data.PAPER){
-    mostPlayed = <img src={paper} alt='SCISSORS' width={40} />
+  if (data.ROCK >= data.PAPER && data.ROCK >= data.SCISSORS) {
+    mostPlayed = <img src={rock} alt='ROCK' width={40} />;
+  } else if (data.PAPER >= data.ROCK && data.PAPER >= data.SCISSORS) {
+    mostPlayed = <img src={scissors} alt='PAPER' width={40} />;
+  } else if (data.SCISSORS >= data.ROCK && data.SCISSORS >= data.PAPER) {
+    mostPlayed = <img src={paper} alt='SCISSORS' width={40} />;
   }
 
   return (
@@ -55,7 +55,7 @@ const Togglable = (props) => {
           {mostPlayed}
         </div>
         <div className='content' data-testid='content'>
-          {games.length === 0 && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
+          {games.length === 0 && <div className='lds-ellipsis'><div /><div /><div /><div /></div>}
           {games.length !== 0 && <VirtualList games={games} player={data._id} />}
         </div>
       </div>

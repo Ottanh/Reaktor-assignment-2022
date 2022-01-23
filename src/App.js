@@ -38,7 +38,6 @@ const App = () => {
       });
   }, []);
 
-  
   return (
 
     <div className='app'>
@@ -50,7 +49,6 @@ const App = () => {
           </div>
         </div>
       </div>
-
       <div className='statsDiv'>
         <h1>Historical stats</h1>
         <div className='statsContainer'>

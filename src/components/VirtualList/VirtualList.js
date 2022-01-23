@@ -3,7 +3,6 @@ import { FixedSizeList as List } from 'react-window';
 import './VirtualList.css';
 
 const Row = ({ index, style, data }) => {
-
   const game = data[0][index];
   const player = data[1];
 
@@ -12,7 +11,7 @@ const Row = ({ index, style, data }) => {
   let player2;
 
   // Always display player on the left and opponend on the right side.
-  if(game.playerA.name === player){
+  if (game.playerA.name === player) {
     player1 = game.playerA;
     player2 = game.playerB;
   } else {
