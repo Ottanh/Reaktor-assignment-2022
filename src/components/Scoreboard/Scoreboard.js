@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Cell from './Cell/Cell';
+import Row from './Row/Row';
 import './Scoreboard.css';
 
 const Scoreboard = ({ liveGames, altRow }) => {
@@ -8,7 +8,7 @@ const Scoreboard = ({ liveGames, altRow }) => {
     <table className='scoreboard'>
       <tbody>
         {liveGames.map(game => (
-          <Cell playerA={game.playerA} playerB={game.playerB} key={game.gameId} altRow={altRow} />
+          <Row playerA={game.playerA} playerB={game.playerB} key={game.gameId} altRow={altRow} />
         ))}
       </tbody>
     </table>

@@ -56,7 +56,7 @@ const Togglable = (props) => {
         </div>
         <div className='content' data-testid='content'>
           {games.length === 0 && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>}
-          {games.length !== 0 && <VirtualList games={games} />}
+          {games.length !== 0 && <VirtualList games={games} player={data._id} />}
         </div>
       </div>
     </div>
